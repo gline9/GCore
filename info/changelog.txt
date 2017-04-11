@@ -1,0 +1,168 @@
+   *** Version History ***
+   
+   
+V-0.1.0: Unofficial Release
+Released: 02/15/2016
+
+  --  Includes the tuple types from gmath in an attempt to modularize big libraries
+      into more manageable pieces.
+      
+  --  First concept library will become the core of all G-Programs.
+  
+  
+V-0.1.1: Util Update
+Released: 02/15/2016
+
+  --  Added ArrayUtils which provides basic array concatenation abilities.
+  
+  --  Added a StopWatch class that can provide basic code time keeping without
+      needing to call System.currentTimeMilliseconds() all of the time.
+      
+  --  Added more tuple classes in case you need to hold more than a 5-tuple.
+  
+  --  Added a counter class for creating easy counters instead of fidgeting with
+      ++ and +=.
+  
+  
+V-0.1.2: Time Update
+Released: 02/16/2016
+
+  --  Added a time package that contains the stopwatch, timeunit, and codetime classes.
+  
+  --  StopWatch is the same as before except now it returns a timeunit value to make it
+      easier to work with it's results.
+      
+  --  TimeUnit is a new class that can easily convert one unit of time to another unit of
+      time, this unit is also the default return type of the StopWatch and CodeTime classes.
+      
+  --  CodeTime takes a runnable then returns as a TimeUnit how long the code took to run.
+  
+  --  Added Counting input and output streams that will keep track of how many bytes have been
+      read from them and are easily resettable and accessible from the class.
+      
+      
+V-0.1.3: Counting Streams Update
+Released: 02/17/2016
+
+  --  Added two new classes CountingInputStream, and CountingOutputStream that will act as a buffer
+      to count the number of bytes sent and received from each of the streams.
+      
+  --  The Classes are used by passing in the respective input/output stream to the class and then
+      just use the counting streams as you would have used the normal stream.
+      
+  --  To access the number of bytes sent/received just call the streams respective functions.
+  
+  --  Also added an average code runtime for the CodeTime class that will run the code the given
+      number of times and then simply take the average time it took to run.
+  
+  
+V-0.1.4: Wrapper Converter Update
+Released: 02/19/2016
+  
+  --  Added a new util in ArrayUtils that will copy elements from an array to a list only if 
+      the given index in the predicate array is true.
+        
+  --  Created a new util class WrapperUtils that will convert primitive arrays to their cooresponding
+      wrapper class array.
+  
+  
+V-0.1.5: IOPair Update
+Released: 02/22/2016
+
+  --  Added a stream utility for testing types of streams where you can create a pair of input and 
+      output streams where the input leads directly to the output through a buffer.
+
+
+V-0.1.6: Stream Debugger Update
+Released: 02/27/2016
+
+  --  Fixed a bug with the iopair class where it would return a casted byte instead of a filtered byte 
+      when reading from it.
+      
+  --  Added two new classes for debugging streams, the classes will print out what is being passed through
+      the stream before you send it so you can view what is happening.
+
+
+V-0.1.7: Stream Util Update
+Released: 03/07/2016
+
+  --  Added a stream util class that provides basic stream operations.
+  
+  --  Added the stream copy operation to the stream util class, this will copy information from an input stream
+      to an output stream until all of the information has been transfered.
+      
+ 
+V-0.1.8: Stream / Array Util Update
+Released: 03/11/2016
+
+  --  Added a copy 2D array method in ArrayUtils that will copy a rugged 2D array into a square array of the
+      given width and height. 
+
+  --  Refactored the StreamUtils class to IOStreamUtil and added a new StreamUtil class for java streams.
+  
+  --  Added a new method in the StreamUtils class to zip together two streams into a single stream by using
+      a BiFunction to combine how the user wants to.
+      
+  --  Changed the copyIf ArrayUtils method to use streams instead of looping through each element.
+      
+
+V-0.1.8.1: To Primitive Update
+Released: 03/28/2016
+
+  --  Added new toPrimitive methods in the Wrapper Utils class that will convert Wrapper arrays to their
+      corresponding primitive arrays.
+
+
+V-0.2.0: Refactoring and Unit Update
+Released: 03/30/2016
+
+  --  Removed the code time and the stop watch classes and added them to the new GProfiler library.
+  
+  --  Added a new class FrequencyUnit that will convert any frequency to other commonly used frequencies
+      and some less commonly used ones. This class will also convert to how long each pulse is in the time
+      unit class.
+
+V-0.2.1: Massive Unit Rework Update
+Released: 04/01/2016
+
+  --  Added a unit superclass so that the basic commands of a unit can be accessed by any program, the basic
+      functionality that must be implemented to make a unit is a conversion table, the unit class will take
+      care of the rest.
+      
+  --  Added several new unit classes to handle basic unit conversion including distance and data
+  
+  --  Changed the bit counter to return the new dataUnit type, and the corresponding counting input and output
+      streams will also return the new dataUnit type as the amount of data that has been stored, this will allow
+      for the inclusion of larger data amounts for the data count, at the cost of precision.
+      
+      
+V-0.3.0: Data Structure Update
+Released: 05/10/2016
+
+  --  Added new binary tree type with two implementations of the binary tree.
+  
+  --  Added lazy sequences with many features including map, filter, take, and reduce. These sequences are not evaluated
+      until called and are an easy way of making quick sequences with little overhead. Currently they do not save their
+      state.
+      
+  --  Added the mutable tuple set up to a mutable hexuple. These are for if you want to be able to change the elements in
+      in a tuple.
+
+
+V-0.3.1: Graph and Unordered Tuple Update
+Released: 09/26/2016
+
+  --  Added Directed and Undirected graphs, these come with operations to join, intersect, union, and subtract graphs from and
+      to each other.
+      
+  --  Added Unordered Tuples so you can have pairs that don't have a built in order to them, you won't be able to see what is in
+      them but you can check what they contain.
+
+
+V-0.3.2: Bit Update
+Released: 09/26/2016
+
+  --  Added Bit Sequence and bit operators so you can parse through the bit representations of different types easier.
+  
+  --  Bit Sequences support abstract sequential list so you can use all of java's collections API
+      
